@@ -1,12 +1,25 @@
 import React from 'react'
 import './less/header.css'
 import {Menu, Dropdown, Icon, Button} from 'choerodon-ui/pro';
+import Store from './stores/Store'
 
 export default class Header extends React.Component {
-    state = {
-        hidden: true,
-        disabled: true,
-    };
+    constructor(props) {
+        super(props)
+        this.state = {
+            hidden: true,
+            disabled: true,
+        };
+    }
+
+    componentDidMount() {
+        this.loadData()
+    }
+
+    loadData() {
+        Store.loadPersonalData()
+        Store.loadSubMenusData()
+    }
 
     handleMenuClick = (e) => {
         if (e.key === '3') {
@@ -17,9 +30,6 @@ export default class Header extends React.Component {
         }
     }
 
-    handlebars() {
-        console.log()
-    }
 
     handleToggleDropdown = () => {
         this.setState({hidden: !this.state.hidden});
@@ -28,38 +38,49 @@ export default class Header extends React.Component {
     render() {
         const menu = (
             <Menu onClick={this.handleMenuClick}>
-                <div className={"c7n-boot-header-user-popover-content"}>
-                    <div className={"c7n-boot-header-user-avatar"}></div>
+                <div className={"c7n-boot-header-user-popover-content header-right-menu1"}>
+                    <div className={"c7n-boot-header-user-avatar header-touxiang"} ></div>
                 </div>
-                <div className={"c7n-boot-header-user-popover-title"}>
-                    <span>管理员</span>
-                    <span>1458598648@qq.com</span>
+                <div className={"c7n-boot-header-user-popover-title header-right-title1"}>
+                    <span>{Store.personaldata.realName}</span>
+                    <span>{Store.personaldata.email}</span>
                 </div>
-                <Menu.Item key="1">
-                    <i className={"icon icon-message_notification"}></i>
-                    "消息通知"
-                </Menu.Item>
-                <Menu.Item key="1">
-                    <i className={"icon icon-person"}></i>
-                    "个人信息"
-                </Menu.Item>
-                <Menu.Item key="1">
-                    <i className={"icon icon-vpn_key"}></i>
-                    "修改密码"
-                </Menu.Item>
-                <Menu.Item key="1">
-                    <i className={"icon icon-authority"}></i>
-                    "权限信息"
-                </Menu.Item>
-                <Menu.Item key="1">
-                    <i className={"icon icon-token"}></i>
-                    "授权管理"
-                </Menu.Item>
-                <Menu.Item key="1">
+                {
+                    Store.subMenusdata.map(el => {
+                            return (
+                                <Menu.Item key={el.id}>
+                                    <i className={`icon ${"icon-"+el.icon}`}></i>
+                                    {el.name}
+                                </Menu.Item>
+                            )
+                        }
+                    )
+                }
+                {/*<Menu.Item key="1">*/}
+                {/*    <i className={"icon icon-message_notification"}></i>*/}
+                {/*    "消息通知"*/}
+                {/*</Menu.Item>*/}
+                {/*<Menu.Item key="2">*/}
+                {/*    <i className={"icon icon-person"}></i>*/}
+                {/*    "个人信息"*/}
+                {/*</Menu.Item>*/}
+                {/*<Menu.Item key="3">*/}
+                {/*    <i className={"icon icon-vpn_key"}></i>*/}
+                {/*    "修改密码"*/}
+                {/*</Menu.Item>*/}
+                {/*<Menu.Item key="4">*/}
+                {/*    <i className={"icon icon-authority"}></i>*/}
+                {/*    "权限信息"*/}
+                {/*</Menu.Item>*/}
+                {/*<Menu.Item key="5">*/}
+                {/*    <i className={"icon icon-token"}></i>*/}
+                {/*    "授权管理"*/}
+                {/*</Menu.Item>*/}
+                <Menu.Item key="6">
                     <i className={"icon icon-settings"}></i>
                     "平台管理"
                 </Menu.Item>
-                <Menu.Item key="1">
+                <Menu.Item key="7">
                     <i className={"icon icon-exit_to_app"}></i>
                     "退出登录"
                 </Menu.Item>
@@ -125,10 +146,10 @@ export default class Header extends React.Component {
                         <li>
                             <Dropdown
                                 overlay={menu}
-                                hidden={this.state.hidden}
+                                hidden={this.state.hidden ? true : false}
                             >
-                                <div className={"c7n-boot-header-user-avatar c7n-popover-open"}
-                                     onClick={this.handleToggleDropdown} onBlur={this.handlebars.bind(this)}>
+                                <div className={"c7n-boot-header-user-avatar c7n-popover-open header-touxiang"}
+                                     onClick={this.handleToggleDropdown}>
 
                                 </div>
                             </Dropdown>

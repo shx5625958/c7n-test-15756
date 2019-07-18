@@ -46,6 +46,17 @@
 .header-right-bt{
     padding-left:-20px;
 }
+.header-right-menu1{
+    position: absolute;
+    float:left
+}
+.header-right-title1{
+    margin-top:17px;
+  margin-left: 60px;
+}
+.header-touxiang{
+    background-image: url("../static/touxiang.gif");
+}
 
 
 

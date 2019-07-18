@@ -1,4 +1,4 @@
-import React, {PureComponent} from 'react';
+import React, {Component} from 'react';
 import {observer} from 'mobx-react';
 import {Button, Table} from 'choerodon-ui';
 import {Action, Content, Header, Page} from '@choerodon/boot';
@@ -6,7 +6,7 @@ import Store from './stores/Store';
 import './less/role.css';
 // import {axios}  from '@choerodon/boot'
 @observer
-export default class Role extends PureComponent {
+export default class Role extends Component {
     componentDidMount() {
         this.loadData();
     }
