@@ -1,0 +1,52 @@
+.header {
+    position: relative;
+}
+
+.header-left {
+    position: absolute;
+}
+
+.header-left-logo {
+    position: relative;
+}
+
+.header-left-logo-font {
+    margin-top: 7px;
+    margin-left: 50px;
+    position: absolute;
+
+}
+
+.header-center-1 {
+    position: absolute;
+    margin-left: 250px;
+
+}
+
+
+.header-right-button {
+    /*margin: 0px;*/
+    /*padding-bottom:2px;*/
+
+    border-left: 2px solid rgba(255, 255, 255, 0.3);
+    border-right: 2px solid rgba(255, 255, 255, 0.3);
+    text-align: left;
+    background: #3f51b5;
+
+}
+.header-right-1{
+    position: relative;
+    float: right;
+    margin-left:68%;
+    margin-bottom: 1px;
+    width: 500px;
+    font-size: 14px;
+    /*background: #3f51b5;*/
+}
+.header-right-bt{
+    padding-left:-20px;
+}
+
+
+
+

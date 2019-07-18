@@ -1,0 +1,9 @@
+/*@import '~choerodon-ui/dist/choerodon-ui.css';*/
+
+.App {
+  float: left;
+}
+.choerodon-role{
+  height: 90%;
+  width: 83%;
+}
