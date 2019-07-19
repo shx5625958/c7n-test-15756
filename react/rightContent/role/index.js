@@ -3,6 +3,7 @@ import {observer} from 'mobx-react';
 import {Button, Icon, Menu, Table, Dropdown} from 'choerodon-ui';
 import {Action, Content, Header, Page} from '@choerodon/boot';
 import Store from './stores/Store';
+import {Link} from 'react-router-dom'
 import './less/role.css';
 // import {axios}  from '@choerodon/boot'
 @observer
@@ -195,10 +196,10 @@ export default class Role extends Component {
                                 全局<Icon type="arrow_drop_down" />
                             </Button>
                         </Dropdown>
-                        <button type={"button"} className={"c7n-btn c7n-btn-flat"}>
+                        {/*<button type={"button"} className={"c7n-btn c7n-btn-flat"}>*/}
                             <i className={"icon icon-playlist_add"}></i>
-                            <span>创建角色</span>
-                        </button>
+                            <Link to={"/demo/role/create"} replace><span>创建角色</span></Link>
+                        {/*</button>*/}
                         <button disabled type={"button"} className={"c7n-btn c7n-btn-flat"}>
                             <i className={"icon icon-content_copy"}></i>
                             <span>基于所选角色创建</span>

@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5d3c5b5c-1118-4281-82f7-763a3faad2a2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/RouteIndex.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/RouteIndex.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react/rightContent/role/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/rightContent/role/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/rightContent/role/stores/Store.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/rightContent/role/stores/Store.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/react/rightContent/role/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="178" column="6" lean-forward="true" selection-start-line="178" selection-start-column="6" selection-end-line="178" selection-end-column="6" />
+            <state relative-caret-position="200">
+              <caret line="201" selection-start-line="201" selection-end-line="201" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
                 <element signature="e#480#625#0" />
@@ -32,11 +31,41 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/react/RouteIndex.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="215">
+              <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/react/rightContent/role/createRole.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/react/config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="250">
+              <caret line="10" column="2" lean-forward="true" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="175">
-                <caret line="7" column="12" lean-forward="true" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="12" />
+              <first_editor relative-caret-position="50">
+                <caret line="2" column="3" lean-forward="true" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="15" />
               </first_editor>
               <second_editor />
             </state>
@@ -44,21 +73,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/react/rightContent/role/less/role.css">
+        <entry file="file://$PROJECT_DIR$/react/master/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/react/rightContent/role/stores/Store.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="72" column="39" lean-forward="true" selection-start-line="72" selection-start-column="39" selection-end-line="72" selection-end-column="39" />
+            <state relative-caret-position="250">
+              <caret line="13" column="29" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="29" />
               <folding>
-                <element signature="e#0#52#0" expanded="true" />
+                <element signature="e#0#48#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -103,7 +123,6 @@
         <option value="$PROJECT_DIR$/react/header/less/header.css" />
         <option value="$PROJECT_DIR$/react/rightContent/role/列表字段说明.md" />
         <option value="$PROJECT_DIR$/react/leftMenu/index.js" />
-        <option value="$PROJECT_DIR$/react/RouteIndex.js" />
         <option value="$PROJECT_DIR$/react/header/stores/Store.js" />
         <option value="$PROJECT_DIR$/../train/react/src/app/demo/containers/organization/tableDemo/index.js" />
         <option value="$PROJECT_DIR$/react/rightContent/role/less/role.css" />
@@ -111,6 +130,8 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/react/rightContent/role/stores/Store.js" />
         <option value="$PROJECT_DIR$/react/rightContent/role/index.js" />
+        <option value="$PROJECT_DIR$/react/RouteIndex.js" />
+        <option value="$PROJECT_DIR$/react/rightContent/role/createRole.js" />
       </list>
     </option>
   </component>
@@ -143,6 +164,18 @@
               <item name="kaohe" type="b2602c69:ProjectViewProjectNode" />
               <item name="kaohe" type="462c0819:PsiDirectoryNode" />
               <item name="react" type="462c0819:PsiDirectoryNode" />
+              <item name="leftMenu" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kaohe" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kaohe" type="462c0819:PsiDirectoryNode" />
+              <item name="react" type="462c0819:PsiDirectoryNode" />
+              <item name="master" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kaohe" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kaohe" type="462c0819:PsiDirectoryNode" />
+              <item name="react" type="462c0819:PsiDirectoryNode" />
               <item name="rightContent" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -157,8 +190,7 @@
               <item name="kaohe" type="462c0819:PsiDirectoryNode" />
               <item name="react" type="462c0819:PsiDirectoryNode" />
               <item name="rightContent" type="462c0819:PsiDirectoryNode" />
-              <item name="role" type="462c0819:PsiDirectoryNode" />
-              <item name="stores" type="462c0819:PsiDirectoryNode" />
+              <item name="welcome" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -213,18 +245,18 @@
       <workItem from="1563358844655" duration="8598000" />
       <workItem from="1563411899221" duration="20989000" />
       <workItem from="1563436774452" duration="20169000" />
-      <workItem from="1563498160643" duration="12399000" />
+      <workItem from="1563498160643" duration="15532000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62155000" />
+    <option name="totallyTimeSpent" value="65288000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12549537" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27476883" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -238,7 +270,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5006605" side_tool="true" weight="0.64447594" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.4993395" visible="true" weight="0.12464589" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.4993395" visible="true" weight="0.4639321" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -266,6 +298,11 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.gitignore">
@@ -303,21 +340,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/react/role/less/role.css" />
     <entry file="file://$PROJECT_DIR$/react/home/index.js" />
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/react/role/index.js" />
-    <entry file="file://$PROJECT_DIR$/react/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" column="2" lean-forward="true" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/react/rightContent/welcome/less/welcome.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -381,30 +404,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/react/RouteIndex.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/react/master/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="12" column="21" lean-forward="true" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/react/leftMenu/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="18" column="14" lean-forward="true" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/react/header/stores/Store.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1025">
@@ -435,13 +434,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/react/rightContent/role/less/role.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/react/header/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="538">
@@ -452,13 +444,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="175">
-            <caret line="7" column="12" lean-forward="true" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="12" />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/react/rightContent/role/less/role.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -472,15 +461,76 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="10" column="2" lean-forward="true" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/leftMenu/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="37" column="63" lean-forward="true" selection-start-line="37" selection-start-column="63" selection-end-line="37" selection-end-column="63" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="50">
+            <caret line="2" column="3" lean-forward="true" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="15" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/react/rightContent/role/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="178" column="6" lean-forward="true" selection-start-line="178" selection-start-column="6" selection-end-line="178" selection-end-column="6" />
+        <state relative-caret-position="200">
+          <caret line="201" selection-start-line="201" selection-end-line="201" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
             <element signature="e#480#625#0" />
             <element signature="e#650#684#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/RouteIndex.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/master/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="13" column="29" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/rightContent/role/createRole.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
         </state>
       </provider>
     </entry>
