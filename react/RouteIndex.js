@@ -9,7 +9,6 @@ const RoleIndex =asyncRouter(()=> import('./rightContent/role/index'));
 class RouteIndex extends React.Component{
     render(){
         const{match,AppState} = this.props;
-        console.log(match)
         return(
             <Switch>
                 <Route path={`${match.url}/role`} component={RoleIndex} />

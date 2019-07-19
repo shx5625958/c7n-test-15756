@@ -56,26 +56,6 @@ export default class Header extends React.Component {
                         }
                     )
                 }
-                {/*<Menu.Item key="1">*/}
-                {/*    <i className={"icon icon-message_notification"}></i>*/}
-                {/*    "消息通知"*/}
-                {/*</Menu.Item>*/}
-                {/*<Menu.Item key="2">*/}
-                {/*    <i className={"icon icon-person"}></i>*/}
-                {/*    "个人信息"*/}
-                {/*</Menu.Item>*/}
-                {/*<Menu.Item key="3">*/}
-                {/*    <i className={"icon icon-vpn_key"}></i>*/}
-                {/*    "修改密码"*/}
-                {/*</Menu.Item>*/}
-                {/*<Menu.Item key="4">*/}
-                {/*    <i className={"icon icon-authority"}></i>*/}
-                {/*    "权限信息"*/}
-                {/*</Menu.Item>*/}
-                {/*<Menu.Item key="5">*/}
-                {/*    <i className={"icon icon-token"}></i>*/}
-                {/*    "授权管理"*/}
-                {/*</Menu.Item>*/}
                 <Menu.Item key="6">
                     <i className={"icon icon-settings"}></i>
                     "平台管理"
@@ -145,6 +125,7 @@ export default class Header extends React.Component {
                         </li>
                         <li>
                             <Dropdown
+                                trigger={['click']}
                                 overlay={menu}
                                 hidden={this.state.hidden ? true : false}
                             >

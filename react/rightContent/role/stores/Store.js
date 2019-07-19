@@ -35,6 +35,7 @@ class Store {
             JSON.stringify(body),
         )
             .then((res) => {
+
                 this.isLoading = false;
                 this.data = res.list;
                 this.pagination = {

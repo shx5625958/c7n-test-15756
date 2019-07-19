@@ -1,12 +1,14 @@
 import React, {Component} from 'react';
 import {observer} from 'mobx-react';
-import {Button, Table} from 'choerodon-ui';
+import {Button, Icon, Menu, Table, Dropdown} from 'choerodon-ui';
 import {Action, Content, Header, Page} from '@choerodon/boot';
 import Store from './stores/Store';
 import './less/role.css';
 // import {axios}  from '@choerodon/boot'
 @observer
 export default class Role extends Component {
+
+
     componentDidMount() {
         this.loadData();
     }
@@ -14,6 +16,8 @@ export default class Role extends Component {
     loadData = () => {
         Store.loadData();
     }
+
+
 
     renderLevel(text) {
         const LEVEL_MAP = {
@@ -23,6 +27,18 @@ export default class Role extends Component {
         return LEVEL_MAP[text] || '全局';
     }
 
+    renderModified(text) {
+        // icon icon-av_timer
+        // icon icon-settings
+        const MODIFIED = {
+            true: <span className={"c7n-iam-status-tag-with-icon"}><i className={"icon icon-av_timer"}></i><span
+                className={"enabletitle"}>自定义</span></span>,
+            false: <span className={"c7n-iam-status-tag-with-icon"}><i className={"icon icon-settings"}></i><span
+                className={"enabletitle"}>预定义</span></span>,
+        };
+        return MODIFIED[text] || '预定义'
+    }
+
     renderTable = () => {
         const {isLoading, pagination} = Store;
         const columns = [
@@ -30,18 +46,19 @@ export default class Role extends Component {
                 title: '名字',
                 dataIndex: 'name',
                 key: 'name',
-                width: '15%',
+                width: '25%',
             },
             {
                 title: '编码',
                 dataIndex: 'code',
                 key: 'code',
-                width: '15%',
+                width: '25%',
             },
             {
                 title: '层级',
                 dataIndex: 'level',
                 key: 'level',
+                width: '15%',
                 filters: [
                     {
                         text: '全局',
@@ -53,12 +70,41 @@ export default class Role extends Component {
                         text: '项目',
                         value: 'project',
                     }],
-                render: text => this.renderLevel(text),
+                render: value => this.renderLevel(value),
+            },
+            {
+                title: '来源',
+                dataIndex: 'modified',
+                key: 'modified',
+                filters: [
+                    {
+                        text: '自定义',
+                        value: 'true'
+                    },
+                    {
+                        text: '预定义',
+                        value: 'false'
+                    }
+                ],
+                // icon icon-av_timer
+                render: text => this.renderModified(text)
             },
             {
                 title: '状态',
                 dataIndex: 'enabled',
                 key: 'enabled',
+                // rnder:(text)=>{
+                //
+                // }
+                render: (text, record) => {
+                    if (record.enabled === true) {
+                        return <span className={"c7n-iam-status-tag-with-icon"} style={{color: "rgb(0, 191, 165)"}}><i
+                            className={"icon icon-check_circle"}></i><span className={"enabletitle"}>启用</span></span>
+                    } else {
+                        return <span className={"c7n-iam-status-tag-with-icon"} style={{color: "red"}}><i
+                            className={"icon icon-remove_circle"}></i><span className={"enabletitle"}>停用</span></span>
+                    }
+                }
             },
             {
                 title: '',
@@ -91,8 +137,20 @@ export default class Role extends Component {
                 },
             },
         ];
+        const rowSelection = {
+            onChange: (selectedRowKeys, selectedRows) => {
+                console.log(`selectedRowKeys: ${selectedRowKeys}`, 'selectedRows: ', selectedRows);
+            },
+            getCheckboxProps: record => ({
+                disabled: record.name === 'Disabled User', // Column configuration not to be checked
+                name: record.name,
+            }),
+            selections: true,
+        };
+
         return (
             <Table
+                rowSelection={rowSelection}
                 columns={columns}
                 dataSource={Store.data.slice()}
                 pagination={pagination}
@@ -103,12 +161,35 @@ export default class Role extends Component {
             />
         );
     }
-
+     onClick = function ({ key }) {
+        console.log(key)
+    };
     render() {
+
+        const menu = (
+            <Menu onClick={this.onClick}>
+                <Menu.Item key="1">1st menu item</Menu.Item>
+                <Menu.Item key="2">2nd memu item</Menu.Item>
+                <Menu.Item key="3">3rd menu item</Menu.Item>
+            </Menu>
+        );
         return (
             <div className={"App"}>
                 <Page className="choerodon-role">
-                    <Header title="表格演示">
+                    <Header title="角色管理">
+                        <Dropdown overlay={menu} trigger={['click']} placement={'bottomCenter'}>
+                            <Button>
+                                全局<Icon type="arrow_drop_down" />
+                            </Button>
+                        </Dropdown>
+                        <button type={"button"} className={"c7n-btn c7n-btn-flat"}>
+                            <i className={"icon icon-playlist_add"}></i>
+                            <span>创建角色</span>
+                        </button>
+                        <button disabled type={"button"} className={"c7n-btn c7n-btn-flat"}>
+                            <i className={"icon icon-content_copy"}></i>
+                            <span>基于所选角色创建</span>
+                        </button>
                         <Button
                             onClick={this.handleRefresh}
                             icon="refresh"
@@ -117,8 +198,8 @@ export default class Role extends Component {
                         </Button>
                     </Header>
                     <Content
-                        title="标题"
-                        description="描述"
+                        title={"平台\"Choerodon\"的角色管理"}
+                        description="角色是您可分配给成员的一组权限。您可以创建角色并为其添加权限，也可以复制现有角色并调整其权限。"
                         link="#"
                     >
                         {this.renderTable()}

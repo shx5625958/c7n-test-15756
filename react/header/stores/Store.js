@@ -40,7 +40,6 @@ class Store {
         ).then((res)=>{
             // console.log(res.subMenus[0].subMenus)
             this.subMenusdata = res.subMenus[0].subMenus
-            console.log(this.subMenusdata)
         })
     }
 }
