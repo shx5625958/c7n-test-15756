@@ -6,7 +6,7 @@ class Store {
     @observable isLoading = true;//用来判断是否加载
     @observable levelData = [];//用来通过头部层级获取的数据
     @observable createtitle = "全局层";
-
+    @observable createSubMenusdata = []
     @observable tabCode="site";
     @observable createTab = [];
     @observable pagination = {
@@ -14,6 +14,14 @@ class Store {
         pageSize: 10,
         total: '',
     };//用来分页
+    @action
+    setcreateSubMenusdata(data){
+        this.createSubMenusdata=data
+    }
+    @computed
+    get getcreateSubMenusdata(){
+        return this.createSubMenusdata
+    }
     @action
     settabCode(data){
         this.tabCode=data
@@ -111,10 +119,25 @@ class Store {
             .then((res)=>{
                 console.log(this.tabCode)
                 console.log(res)
+                const json = JSON.parse(JSON.stringify(res).replace(/subMenus/g,"children"));
+                const json1 = JSON.parse(JSON.stringify(json).replace(/id/g,"key"));
+                this.setcreateTab(json1.children)
 
             })
     }
-
+    @action
+    loadSubMenusData(){
+        const body={};
+        axios.get(
+            `/iam/v1/menus?code=choerodon.code.top.user&source_id=0`,
+            JSON.stringify(body),
+        ).then((res)=>{
+            // console.log(res.subMenus[0].subMenus)
+            const json =JSON.parse(JSON.stringify(res.subMenus).replace(/subMenus/g,"children"));
+            const json1 = JSON.parse(JSON.stringify(json).replace(/id/g,"key"));
+            this.setcreateSubMenusdata(json1)
+        })
+    }
 }
 
 const store = new Store();

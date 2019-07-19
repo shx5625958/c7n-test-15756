@@ -101,9 +101,6 @@ export default class Role extends Component {
                 title: '角色状态',
                 dataIndex: 'enabled',
                 key: 'enabled',
-                // rnder:(text)=>{
-                //
-                // }
                 render: (text, record) => {
                     if (record.enabled === true) {
                         return <span className={"c7n-iam-status-tag-with-icon"} style={{color: "rgb(0, 191, 165)"}}><i
