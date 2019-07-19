@@ -16,25 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/react/rightContent/role/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="591">
-              <caret line="179" column="19" lean-forward="true" selection-start-line="179" selection-start-column="19" selection-end-line="179" selection-end-column="19" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-                <element signature="e#480#625#0" />
-                <element signature="e#650#684#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/react/rightContent/role/createRole.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="27" column="41" lean-forward="true" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
+            <state relative-caret-position="393">
+              <caret line="51" column="29" lean-forward="true" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="29" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -42,11 +28,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/react/rightContent/role/stores/Store.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+            <state relative-caret-position="200">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
               <folding>
                 <element signature="e#0#52#0" expanded="true" />
               </folding>
@@ -55,10 +41,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/react/rightContent/role/less/role.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="125">
+                <caret line="5" column="143" selection-start-line="5" selection-start-column="143" selection-end-line="5" selection-end-column="143" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -107,12 +96,12 @@
         <option value="$PROJECT_DIR$/../train/react/src/app/demo/containers/organization/tableDemo/index.js" />
         <option value="$PROJECT_DIR$/react/header/index.js" />
         <option value="$PROJECT_DIR$/react/RouteIndex.js" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/react/rightContent/role/less/role.css" />
         <option value="$PROJECT_DIR$/react/leftMenu/index.js" />
-        <option value="$PROJECT_DIR$/react/rightContent/role/createRole.js" />
+        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/react/rightContent/role/index.js" />
         <option value="$PROJECT_DIR$/react/rightContent/role/stores/Store.js" />
+        <option value="$PROJECT_DIR$/react/rightContent/role/createRole.js" />
       </list>
     </option>
   </component>
@@ -145,12 +134,6 @@
               <item name="kaohe" type="b2602c69:ProjectViewProjectNode" />
               <item name="kaohe" type="462c0819:PsiDirectoryNode" />
               <item name="react" type="462c0819:PsiDirectoryNode" />
-              <item name="leftMenu" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kaohe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kaohe" type="462c0819:PsiDirectoryNode" />
-              <item name="react" type="462c0819:PsiDirectoryNode" />
               <item name="rightContent" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -159,14 +142,6 @@
               <item name="react" type="462c0819:PsiDirectoryNode" />
               <item name="rightContent" type="462c0819:PsiDirectoryNode" />
               <item name="role" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kaohe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kaohe" type="462c0819:PsiDirectoryNode" />
-              <item name="react" type="462c0819:PsiDirectoryNode" />
-              <item name="rightContent" type="462c0819:PsiDirectoryNode" />
-              <item name="role" type="462c0819:PsiDirectoryNode" />
-              <item name="less" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="kaohe" type="b2602c69:ProjectViewProjectNode" />
@@ -229,12 +204,12 @@
       <workItem from="1563358844655" duration="8598000" />
       <workItem from="1563411899221" duration="20989000" />
       <workItem from="1563436774452" duration="20169000" />
-      <workItem from="1563498160643" duration="23435000" />
+      <workItem from="1563498160643" duration="29981000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73191000" />
+    <option name="totallyTimeSpent" value="79737000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -254,7 +229,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5006605" side_tool="true" weight="0.17256011" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.4993395" visible="true" weight="0.12871288" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.4993395" visible="true" weight="0.13719943" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -462,16 +437,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="100">
-            <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/react/rightContent/role/less/role.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -489,34 +454,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/react/rightContent/role/createRole.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="27" column="41" lean-forward="true" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="125">
+            <caret line="5" column="143" selection-start-line="5" selection-start-column="143" selection-end-line="5" selection-end-column="143" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/react/rightContent/role/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="591">
-          <caret line="179" column="19" lean-forward="true" selection-start-line="179" selection-start-column="19" selection-end-line="179" selection-end-column="19" />
+        <state relative-caret-position="287">
+          <caret line="16" column="24" lean-forward="true" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
-            <element signature="e#480#625#0" />
-            <element signature="e#650#684#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/react/rightContent/role/stores/Store.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+        <state relative-caret-position="200">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
           <folding>
             <element signature="e#0#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/rightContent/role/createRole.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="51" column="29" lean-forward="true" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>

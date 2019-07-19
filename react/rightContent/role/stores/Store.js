@@ -7,12 +7,29 @@ class Store {
     @observable levelData = [];//用来通过头部层级获取的数据
     @observable createtitle = "全局层";
 
+    @observable tabCode="site";
+    @observable createTab = [];
     @observable pagination = {
         current: 1,
         pageSize: 10,
         total: '',
     };//用来分页
     @action
+    settabCode(data){
+        this.tabCode=data
+    }
+    @computed
+    get gettabCode(){
+        return this.tabCode
+    }
+    @action
+    setcreateTab(data){
+        this.createTab = data;
+    }
+    @computed
+    get getcreateTab(){
+        return this.createTab.slice()
+    }    @action
     setcreatetitle(data){
         this.createtitle = data;
     }
@@ -77,7 +94,6 @@ class Store {
             }
             )
             .then((res) => {
-
                     console.log(res)
                 this.isLoading = false;
                 this.data = res.list;
@@ -87,6 +103,16 @@ class Store {
                     total: res.total,
                 };
             });
+    }
+    @action
+    loadcreateTab(){
+        console.log("我要开始加载创建用户界面的tub菜单数据了奥")
+        axios.get(`http://api.staging.saas.hand-china.com/iam/v1/menus/menu_config?code=choerodon.code.top.${this.tabCode}`)
+            .then((res)=>{
+                console.log(this.tabCode)
+                console.log(res)
+
+            })
     }
 
 }

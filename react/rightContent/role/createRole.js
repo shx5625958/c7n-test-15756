@@ -1,15 +1,20 @@
 import React, {Component} from 'react';
 import {observer} from 'mobx-react';
-import {Input, Row, Col, Lov, Select} from 'choerodon-ui';
+import {Input, Row, Col, Lov, Select,Tabs } from 'choerodon-ui';
 import Store from './stores/Store';
 import {Link} from 'react-router-dom'
 import './less/role.css';
+const TabPane = Tabs.TabPane;
 
 @observer
 export default class CreateRole extends Component {
 
-
-
+    componentWillMount() {
+        Store.loadcreateTab()
+    }
+    callback(key) {
+        console.log(key);
+    }
     render() {
         return (
             <div className={"App"}>
@@ -27,7 +32,7 @@ export default class CreateRole extends Component {
                                     </i>
                                 </button>
                             </Link>
-                            <span className={"page-head-title createRoleBefore"}>创建{Store.getcreatetitle}角色</span>
+                            <span className={"page-head-title createRoleBefore"}>创建角色</span>
                         </div>
                     </div>
                     <div className={"page-content"}>
@@ -39,11 +44,14 @@ export default class CreateRole extends Component {
                                 <Input placeholder="角色名称*"  required label="Basic"  />
                             </Col>
                         </Row>
-                        {/*<Row gutter={10}>*/}
-                        {/*    <Col span={14}>*/}
-                        {/*        <Select  name="mySex" />*/}
-                        {/*    </Col>*/}
-                        {/*</Row>*/}
+                        <Tabs defaultActiveKey="1" onChange={this.callback}>
+                            <TabPane tab={Store.getcreatetitle} key="1">这是{Store.getcreatetitle}的菜单</TabPane>
+                            {
+                                Store.getcreatetitle=="全局层"?
+                                <TabPane  tab="个人中心" key="2">这是个人中心的菜单</TabPane>:''
+                            }
+
+                        </Tabs>
                     </div>
                 </div>
             </div>

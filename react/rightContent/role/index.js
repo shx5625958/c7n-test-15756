@@ -10,9 +10,6 @@ import './less/role.css';
 export default class Role extends Component {
     constructor(props) {
         super(props);
-        this.state={
-            cengji:"全局层"
-        }
     }
 
 
@@ -22,7 +19,6 @@ export default class Role extends Component {
 
     loadData = () => {
         Store.loadData();
-        // Store.loadLevelData("project");
     }
 
 
@@ -36,8 +32,6 @@ export default class Role extends Component {
     }
 
     renderModified(text) {
-        // icon icon-av_timer
-        // icon icon-settings
         const MODIFIED = {
             true: <span className={"c7n-iam-status-tag-with-icon"}><i className={"icon icon-av_timer"}></i><span
                 className={"enabletitle"}>自定义</span></span>,
@@ -181,16 +175,18 @@ export default class Role extends Component {
             Store.loadLevelData("site");
             // Store.setcreateTitle("全局层")
             Store.setcreatetitle("全局层")
-
-
+            Store.settabCode("site")
         }else if(key==2){
             Store.loadLevelData("organization");
             // Store.setcreateTitle("组织层")
             Store.setcreatetitle("组织层")
+            Store.settabCode("organization")
+
         }else if(key==3){
             Store.loadLevelData("project");
             // Store.setcreateTitle("项目层")
             Store.setcreatetitle("项目层")
+            Store.settabCode("project")
 
         }
     };
@@ -209,7 +205,7 @@ export default class Role extends Component {
                     <Header title="角色管理">
                         <Dropdown overlay={menu} trigger={['click']} placement={'bottomCenter'}>
                             <Button>
-                                {this.state.cengji}<Icon type="arrow_drop_down" />
+                                {Store.getcreatetitle}<Icon type="arrow_drop_down" />
                             </Button>
                         </Dropdown>
                         {/*<button type={"button"} className={"c7n-btn c7n-btn-flat"}>*/}
