@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="5d3c5b5c-1118-4281-82f7-763a3faad2a2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/RouteIndex.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/RouteIndex.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/header/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/header/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/header/stores/Store.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/header/stores/Store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react/rightContent/role/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/rightContent/role/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/rightContent/role/less/role.css" beforeDir="false" afterPath="$PROJECT_DIR$/react/rightContent/role/less/role.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/rightContent/role/stores/Store.js" beforeDir="false" afterPath="$PROJECT_DIR$/react/rightContent/role/stores/Store.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,28 +18,27 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/react/header/index.js">
+        <entry file="file://$PROJECT_DIR$/react/rightContent/role/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="538">
-              <caret line="127" column="50" selection-start-line="127" selection-start-column="50" selection-end-line="127" selection-end-column="50" />
+            <state relative-caret-position="17">
+              <caret line="85" column="37" lean-forward="true" selection-start-line="85" selection-start-column="37" selection-end-line="85" selection-end-column="37" />
               <folding>
-                <element signature="e#0#25#0" expanded="true" />
+                <element signature="e#0#39#0" expanded="true" />
+                <element signature="e#480#625#0" />
+                <element signature="e#650#684#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/react/rightContent/role/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
-              <caret line="192" column="31" lean-forward="true" selection-start-line="192" selection-start-column="31" selection-end-line="192" selection-end-column="31" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-                <element signature="e#480#625#0" />
-                <element signature="e#650#684#0" />
-                <element signature="e#814#4349#0" />
-              </folding>
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="25">
+                <caret line="1" column="28" lean-forward="true" selection-start-line="1" selection-end-line="2" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -103,13 +98,15 @@
         <option value="$PROJECT_DIR$/react/rightContent/role/less/role.css" />
         <option value="$PROJECT_DIR$/react/header/index.js" />
         <option value="$PROJECT_DIR$/react/rightContent/role/index.js" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="952" />
-    <option name="width" value="977" />
-    <option name="height" value="1038" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="450" />
+    <option name="y" value="207" />
+    <option name="width" value="1190" />
+    <option name="height" value="1014" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -237,18 +234,18 @@
       <workItem from="1563358844655" duration="8598000" />
       <workItem from="1563411899221" duration="20989000" />
       <workItem from="1563436774452" duration="20169000" />
-      <workItem from="1563498160643" duration="7310000" />
+      <workItem from="1563498160643" duration="8840000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57066000" />
+    <option name="totallyTimeSpent" value="58596000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="762" y="0" width="781" height="830" extended-state="0" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.31543624" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12549537" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -262,7 +259,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5006605" side_tool="true" weight="0.64447594" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4993395" weight="0.4383954" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.4993395" visible="true" weight="0.19263457" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -488,14 +485,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/react/rightContent/role/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="192" column="31" lean-forward="true" selection-start-line="192" selection-start-column="31" selection-end-line="192" selection-end-column="31" />
+        <state relative-caret-position="17">
+          <caret line="85" column="37" lean-forward="true" selection-start-line="85" selection-start-column="37" selection-end-line="85" selection-end-column="37" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
             <element signature="e#480#625#0" />
             <element signature="e#650#684#0" />
-            <element signature="e#814#4349#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="25">
+            <caret line="1" column="28" lean-forward="true" selection-start-line="1" selection-end-line="2" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

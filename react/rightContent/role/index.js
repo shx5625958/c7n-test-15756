@@ -43,19 +43,21 @@ export default class Role extends Component {
         const {isLoading, pagination} = Store;
         const columns = [
             {
-                title: '名字',
+                title: '角色名称',
                 dataIndex: 'name',
                 key: 'name',
                 width: '25%',
+                filters:[]
             },
             {
-                title: '编码',
+                title: '角色编码',
                 dataIndex: 'code',
                 key: 'code',
                 width: '25%',
+                filters:[],
             },
             {
-                title: '层级',
+                title: '角色层级',
                 dataIndex: 'level',
                 key: 'level',
                 width: '15%',
@@ -70,10 +72,12 @@ export default class Role extends Component {
                         text: '项目',
                         value: 'project',
                     }],
+                onFilter: (value, record) => record.level.toString().indexOf(value) === 0,
+                sorter: (a, b) => a.level.length - b.level.length,
                 render: value => this.renderLevel(value),
             },
             {
-                title: '来源',
+                title: '角色来源',
                 dataIndex: 'modified',
                 key: 'modified',
                 filters: [
@@ -87,10 +91,12 @@ export default class Role extends Component {
                     }
                 ],
                 // icon icon-av_timer
+                onFilter: (value, record) => record.modified.toString().indexOf(value) === 0,
+                sorter: (a, b) => a.level.modified - b.modified.length,
                 render: text => this.renderModified(text)
             },
             {
-                title: '状态',
+                title: '角色状态',
                 dataIndex: 'enabled',
                 key: 'enabled',
                 // rnder:(text)=>{
