@@ -15,6 +15,7 @@ export default class Role extends Component {
 
     loadData = () => {
         Store.loadData();
+        // Store.loadLevelData("project");
     }
 
 
@@ -168,15 +169,21 @@ export default class Role extends Component {
         );
     }
      onClick = function ({ key }) {
-        console.log(key)
+        if(key==1){
+            Store.loadLevelData("site");
+        }else if(key==2){
+            Store.loadLevelData("organization");
+        }else if(key==3){
+            Store.loadLevelData("project");
+        }
     };
     render() {
 
         const menu = (
             <Menu onClick={this.onClick}>
-                <Menu.Item key="1">1st menu item</Menu.Item>
-                <Menu.Item key="2">2nd memu item</Menu.Item>
-                <Menu.Item key="3">3rd menu item</Menu.Item>
+                <Menu.Item key="1">全局</Menu.Item>
+                <Menu.Item key="2">组织</Menu.Item>
+                <Menu.Item key="3">项目</Menu.Item>
             </Menu>
         );
         return (
