@@ -8,6 +8,12 @@ import './less/role.css';
 // import {axios}  from '@choerodon/boot'
 @observer
 export default class Role extends Component {
+    constructor(props) {
+        super(props);
+        this.state={
+            cengji:"全局层"
+        }
+    }
 
 
     componentDidMount() {
@@ -169,19 +175,29 @@ export default class Role extends Component {
             />
         );
     }
-     onClick = function ({ key }) {
+    onClick = function ({ key }) {
+
         if(key==1){
             Store.loadLevelData("site");
+            // Store.setcreateTitle("全局层")
+            Store.setcreatetitle("全局层")
+
+
         }else if(key==2){
             Store.loadLevelData("organization");
+            // Store.setcreateTitle("组织层")
+            Store.setcreatetitle("组织层")
         }else if(key==3){
             Store.loadLevelData("project");
+            // Store.setcreateTitle("项目层")
+            Store.setcreatetitle("项目层")
+
         }
     };
     render() {
 
         const menu = (
-            <Menu onClick={this.onClick}>
+            <Menu onClick={this.onClick.bind(this)}>
                 <Menu.Item key="1">全局</Menu.Item>
                 <Menu.Item key="2">组织</Menu.Item>
                 <Menu.Item key="3">项目</Menu.Item>
@@ -193,7 +209,7 @@ export default class Role extends Component {
                     <Header title="角色管理">
                         <Dropdown overlay={menu} trigger={['click']} placement={'bottomCenter'}>
                             <Button>
-                                全局<Icon type="arrow_drop_down" />
+                                {this.state.cengji}<Icon type="arrow_drop_down" />
                             </Button>
                         </Dropdown>
                         {/*<button type={"button"} className={"c7n-btn c7n-btn-flat"}>*/}

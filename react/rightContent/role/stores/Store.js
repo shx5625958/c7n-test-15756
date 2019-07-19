@@ -5,11 +5,21 @@ class Store {
     @observable data = [];//用来渲染首页的数据
     @observable isLoading = true;//用来判断是否加载
     @observable levelData = [];//用来通过头部层级获取的数据
+    @observable createtitle = "全局层";
+
     @observable pagination = {
         current: 1,
         pageSize: 10,
         total: '',
     };//用来分页
+    @action
+    setcreatetitle(data){
+        this.createtitle = data;
+    }
+    @computed
+    get getcreatetitle(){
+        return this.createtitle;
+    }
     @action
     setlevelData(data){
         this.levelData = data;
@@ -44,7 +54,6 @@ class Store {
             JSON.stringify(body),
         )
             .then((res) => {
-
                 this.isLoading = false;
                 this.data = res.list;
                 this.pagination = {

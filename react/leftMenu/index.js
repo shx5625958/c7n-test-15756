@@ -35,7 +35,7 @@ export default class LeftMenu extends React.Component {
                     </Menu.Item>
                     <Menu.Item key="1">
                         <Icon type="pie_chart_outlined"/>
-                        <span><Link to="/demo/role">角色管理</Link></span>
+                        <span><Link to="/demo/role" replace>角色管理</Link></span>
                     </Menu.Item>
                 </Menu>
             </div>
