@@ -4,8 +4,6 @@ import {Input, Row, Col, Lov, Select, Tabs, Table} from 'choerodon-ui';
 import Store from './stores/Store';
 import {Link} from 'react-router-dom'
 import './less/role.css';
-import {Action} from "@choerodon/boot";
-import TabLeft from './tableft.js'
 
 //
 
@@ -26,7 +24,20 @@ export default class CreateRole extends Component {
         }
 
     }
-
+    handleBianma(e){
+        let value = e.target.value;
+        if(!(/^[a-zA-Z][a-zA-Z0-9_,-/]*$/.test(value))) {
+            alert('请输入正确的编码');
+        }
+    // ^[a-zA-Z][a-zA-Z0-9_-/]*$
+        console.log(value)
+    }
+    handlemingcheng(e){
+        console.log(e.target.value)
+        if(!(/^[a-zA-Z][a-zA-Z0-9_,-/]*$/.test(e.target.value))) {
+            alert('请输入正确的名称');
+        }
+    }
     handleUpTree = () => {
         this.setState({
             keys: []
@@ -35,8 +46,6 @@ export default class CreateRole extends Component {
 
 
     handleOnExpand = (expanded, record) => {
-        // console.log(expanded)
-        console.log(record.key)
 
         const {keys} = this.state;
         if (expanded==true) {
@@ -59,13 +68,13 @@ export default class CreateRole extends Component {
                 }
             }
         }
-        console.log(keys)
         Store.setExpandedRowsKeys(keys)
 
     }
 
     callback(key) {
         console.log(key);
+
     }
 
 
@@ -138,10 +147,10 @@ export default class CreateRole extends Component {
                     <div className={"page-content"}>
                         <Row gutter={8}>
                             <Col span={7}>
-                                <Input placeholder="角色编码*" required label="Basic" copy/>
+                                <Input placeholder="角色编码*" required label="Basic" onChange={this.handleBianma.bind(this)} copy/>
                             </Col>
                             <Col span={7}>
-                                <Input placeholder="角色名称*" required label="Basic"/>
+                                <Input placeholder="角色名称*" required label="Basic" onChange={this.handlemingcheng.bind(this)} copy/>
                             </Col>
                         </Row>
                         <div className={"createmenu"}>
@@ -168,7 +177,7 @@ export default class CreateRole extends Component {
                         {
                             Store.getcreatetitle == "全局层" ?
                                 <TabPane tab="个人中心" key="2">
-                                    <Table expandedRowKeys={Store.getExpandedRowsKeys} rowSelection={rowSelection} columns={columns} dataSource={Store.getcreateSubMenusdata}/>
+                                    <Table expandedRowKeys={Store.getcreateSubMenusdata.map(item=>item.key)}  rowSelection={rowSelection} columns={columns} dataSource={Store.getcreateSubMenusdata}/>
                                 </TabPane> : ''
                         }
                         </Tabs>
