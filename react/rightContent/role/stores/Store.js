@@ -14,6 +14,24 @@ class Store {
         pageSize: 10,
         total: '',
     };//用来分页
+    @observable zhankaitable=false
+    @observable ExpandedRowsKeys=[]
+    @action
+    setExpandedRowsKeys(data){
+        this.ExpandedRowsKeys=data
+    }
+    @computed
+    get getExpandedRowsKeys(){
+        return this.ExpandedRowsKeys
+    }
+    @action
+    setzhankaitable(data){
+        this.zhankaitable=data
+    }
+    @computed
+    get getzhankaitable(){
+        return this.zhankaitable
+    }
     @action
     setcreateSubMenusdata(data){
         this.createSubMenusdata=data
@@ -103,7 +121,7 @@ class Store {
             )
             .then((res) => {
                     console.log(res)
-                this.isLoading = false;
+                    this.isLoading = false;
                 this.data = res.list;
                 this.pagination = {
                     current: res.pageNum,

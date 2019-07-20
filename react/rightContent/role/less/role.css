@@ -1,16 +1,33 @@
 /*@import '~choerodon-ui/dist/choerodon-ui.css';*/
 
 .App {
-  float: left;
+    float: left;
 }
-.choerodon-role{
-  height: 90%;
-  width: 83%;
+
+.choerodon-role {
+    height: 90%;
+    width: 83%;
 }
-.enabletitle{
-  color: #000;
-  margin-left: 4px;
+
+.enabletitle {
+    color: #000;
+    margin-left: 4px;
 }
-.createRoleBefore{
-  position: absolute;
+
+.createRoleBefore {
+    position: absolute;
+}
+
+.menumenu {
+    margin-right: 80px;
+    font-size: 16px;
+}
+.createmenu{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.font{
+    font-size: 16px;
+
 }
