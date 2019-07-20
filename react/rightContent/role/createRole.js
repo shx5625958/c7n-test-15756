@@ -20,23 +20,33 @@ export default class CreateRole extends Component {
         super(props);
         this.state = {
             ExpandedRowsKeys: [],
-            keys: []
+            keys: [],
+            bianmavalue :"",
+            mingchengvalue:"",
+            tijiaovalue:{}
         }
 
     }
     handleBianma(e){
-        let value = e.target.value;
-        if(!(/^[a-zA-Z][a-zA-Z0-9_,-/]*$/.test(value))) {
+        // let value = e.target.value;
+        if(!(/^[a-zA-Z][a-zA-Z0-9_,-/]*$/.test(e.target.value))) {
             alert('请输入正确的编码');
         }
     // ^[a-zA-Z][a-zA-Z0-9_-/]*$
-        console.log(value)
+        this.setState({
+            bianmavalue:e.target.value
+        })
+
     }
     handlemingcheng(e){
         console.log(e.target.value)
         if(!(/^[a-zA-Z][a-zA-Z0-9_,-/]*$/.test(e.target.value))) {
             alert('请输入正确的名称');
         }
+        this.setState({
+            mingchengvalue:e.target.value
+        })
+
     }
     handleUpTree = () => {
         this.setState({
@@ -77,8 +87,18 @@ export default class CreateRole extends Component {
 
     }
 
-
+    handletijiao(){
+        const tijiao = this.state.tijiaovalue
+        const bianma = this.state.bianmavalue
+        const mingcheng = this.state.mingchengvalue
+        Store.setformData(tijiao)
+        Store.setformData(bianma)
+        Store.setformData(mingcheng)
+      console.log(tijiao,bianma,mingcheng)
+    }
     handletable() {
+        console.log(Store.getformData)
+
         Store.setzhankaitable(!Store.getzhankaitable)
         if(Store.getzhankaitable){
             Store.setExpandedRowsKeys(Store.getcreateTab.map(item => item.key))
@@ -118,9 +138,13 @@ export default class CreateRole extends Component {
         const rowSelection = {
             onChange: (selectedRowKeys, selectedRows) => {
                 console.log(`selectedRowKeys: ${selectedRowKeys}`, 'selectedRows: ', selectedRows);
+
             },
             onSelect: (record, selected, selectedRows) => {
                 console.log(record, selected, selectedRows);
+                this.setState({
+                    tijiaovalue:selectedRows
+                })
             },
             onSelectAll: (selected, selectedRows, changeRows) => {
                 console.log(selected, selectedRows, changeRows);
@@ -147,10 +171,10 @@ export default class CreateRole extends Component {
                     <div className={"page-content"}>
                         <Row gutter={8}>
                             <Col span={7}>
-                                <Input placeholder="角色编码*" required label="Basic" onChange={this.handleBianma.bind(this)} copy/>
+                                <Input value={this.state.bianmavalue} placeholder="角色编码*" required label="Basic" onChange={this.handleBianma.bind(this)} copy/>
                             </Col>
                             <Col span={7}>
-                                <Input placeholder="角色名称*" required label="Basic" onChange={this.handlemingcheng.bind(this)} copy/>
+                                <Input value={this.state.mingchengvalue} placeholder="角色名称*" required label="Basic" onChange={this.handlemingcheng.bind(this)} copy/>
                             </Col>
                         </Row>
                         <div className={"createmenu"}>
@@ -181,6 +205,16 @@ export default class CreateRole extends Component {
                                 </TabPane> : ''
                         }
                         </Tabs>
+                        <div className={"createRolecreatediv"}>
+                            <button type={"button"}className={"c7n-btn c7n-btn-primary c7n-btn-raised createRolecreatebtn"} onClick={this.handletijiao.bind(this)}>
+                                <span>创建</span>
+                                <div className={"c7n-ripple-wrapper"}></div>
+                            </button>
+                            <button type={"button"} className={"c7n-btn c7n-btn-raised"} style={{color: "rgb(63, 81, 181)"}}>
+                                <span>取消</span>
+                                <div className={"c7n-ripple-wrapper"}></div>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>

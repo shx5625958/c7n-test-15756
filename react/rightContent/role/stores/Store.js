@@ -14,8 +14,17 @@ class Store {
         pageSize: 10,
         total: '',
     };//用来分页
-    @observable zhankaitable=false
-    @observable ExpandedRowsKeys=[]
+    @observable zhankaitable=false;
+    @observable ExpandedRowsKeys=[];
+    @observable formData=[];
+    @action
+    setformData(data){
+        this.formData.push(data)
+    }
+    @computed
+    get getformData(){
+        return this.formData
+    }
     @action
     setExpandedRowsKeys(data){
         this.ExpandedRowsKeys=data
