@@ -14,8 +14,18 @@ export default class CreateRole extends Component {
     componentWillMount() {
         Store.loadcreateTab()
         Store.loadSubMenusData()
+       this.loadValue()
     }
-
+    loadValue(){
+        console.log(Store.getformData)
+        if(Store.getformData){
+            const data1 = Store.getformData
+            this.setState({
+                bianmavalue:data1[1],
+                mingchengvalue:data1[2]
+            })
+        }
+    }
     constructor(props) {
         super(props);
         this.state = {

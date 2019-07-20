@@ -3,7 +3,7 @@ import {observer} from 'mobx-react';
 import {Button, Icon, Menu, Table, Dropdown} from 'choerodon-ui';
 import {Action, Content, Header, Page} from '@choerodon/boot';
 import Store from './stores/Store';
-import {Link} from 'react-router-dom'
+import {Link,Redirect } from 'react-router-dom'
 import './less/role.css';
 // import {axios}  from '@choerodon/boot'
 @observer
@@ -21,7 +21,10 @@ export default class Role extends Component {
         Store.loadData();
     }
 
-
+    shwModal(){
+        // return <Link to={"/demo/role/create"} replace></Link>
+        this.props.history.push("/demo/role/create")
+    }
 
     renderLevel(text) {
         const LEVEL_MAP = {
@@ -116,11 +119,14 @@ export default class Role extends Component {
                 key: 'action',
                 align: 'right',
                 render: (text, record) => {
+
                     const actionDatas = [{
                         icon: '',
                         type: 'site',
                         text: '修改',
                         // action: this.showModal.bind(this, record.id),
+                        // action:this.showModal(record)
+                        action:this.shwModal.bind(this)
                     }];
                     if (record.enabled) {
                         actionDatas.push({
@@ -137,8 +143,10 @@ export default class Role extends Component {
                             // action: this.handleEnable.bind(this, record),
                         });
                     }
-                    return <Action data={actionDatas}
-                                   getPopupContainer={() => document.getElementsByClassName('page-content')[0]}/>;
+                    return <Action  data={actionDatas}
+                                    getPopupContainer={() => document.getElementsByClassName('page-content')[0]}>
+
+                    </Action>;
                 },
             },
         ];
