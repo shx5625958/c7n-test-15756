@@ -1,15 +1,20 @@
 import React, {Component} from 'react';
 import {observer} from 'mobx-react';
-import {Button, Icon, Menu, Table, Dropdown} from 'choerodon-ui';
-import {Action, Content, Header, Page} from '@choerodon/boot';
+import {Button, Icon, Menu,  Dropdown} from 'choerodon-ui';
+import {Action, Content, Header, Page} from '@choerodon/boot/';
+import {DataSet,Table} from "choerodon-ui/pro";
 import Store from './stores/Store';
+import Store1 from './stores/index';
 import {Link,Redirect } from 'react-router-dom'
 import './less/role.css';
 // import {axios}  from '@choerodon/boot'
+
+const { Column } = Table;
 @observer
 export default class Role extends Component {
     constructor(props) {
         super(props);
+        this.ds = new DataSet(Store1);
     }
 
 
@@ -44,136 +49,136 @@ export default class Role extends Component {
         return MODIFIED[text] || '预定义'
     }
 
-    renderTable = () => {
-        const {isLoading, pagination} = Store;
-        const columns = [
-            {
-                title: '角色名称',
-                dataIndex: 'name',
-                key: 'name',
-                width: '25%',
-                filters:[]
-            },
-            {
-                title: '角色编码',
-                dataIndex: 'code',
-                key: 'code',
-                width: '25%',
-                filters:[],
-            },
-            {
-                title: '角色层级',
-                dataIndex: 'level',
-                key: 'level',
-                width: '15%',
-                filters: [
-                    {
-                        text: '全局',
-                        value: 'site',
-                    }, {
-                        text: '组织',
-                        value: 'organization',
-                    }, {
-                        text: '项目',
-                        value: 'project',
-                    }],
-                onFilter: (value, record) => record.level.toString().indexOf(value) === 0,
-                sorter: (a, b) => a.level.length - b.level.length,
-                render: value => this.renderLevel(value),
-            },
-            {
-                title: '角色来源',
-                dataIndex: 'modified',
-                key: 'modified',
-                filters: [
-                    {
-                        text: '自定义',
-                        value: 'true'
-                    },
-                    {
-                        text: '预定义',
-                        value: 'false'
-                    }
-                ],
-                // icon icon-av_timer
-                onFilter: (value, record) => record.modified.toString().indexOf(value) === 0,
-                sorter: (a, b) => a.level.modified - b.modified.length,
-                render: text => this.renderModified(text)
-            },
-            {
-                title: '角色状态',
-                dataIndex: 'enabled',
-                key: 'enabled',
-                render: (text, record) => {
-                    if (record.enabled === true) {
-                        return <span className={"c7n-iam-status-tag-with-icon"} style={{color: "rgb(0, 191, 165)"}}><i
-                            className={"icon icon-check_circle"}></i><span className={"enabletitle"}>启用</span></span>
-                    } else {
-                        return <span className={"c7n-iam-status-tag-with-icon"} style={{color: "red"}}><i
-                            className={"icon icon-remove_circle"}></i><span className={"enabletitle"}>停用</span></span>
-                    }
-                }
-            },
-            {
-                title: '',
-                key: 'action',
-                align: 'right',
-                render: (text, record) => {
-
-                    const actionDatas = [{
-                        icon: '',
-                        type: 'site',
-                        text: '修改',
-                        // action: this.showModal.bind(this, record.id),
-                        // action:this.showModal(record)
-                        action:this.shwModal.bind(this)
-                    }];
-                    if (record.enabled) {
-                        actionDatas.push({
-                            icon: '',
-                            type: 'site',
-                            text: '停用',
-                            // action: this.handleEnable.bind(this, record),
-                        });
-                    } else {
-                        actionDatas.push({
-                            icon: '',
-                            type: 'site',
-                            text: '启用',
-                            // action: this.handleEnable.bind(this, record),
-                        });
-                    }
-                    return <Action  data={actionDatas}
-                                    getPopupContainer={() => document.getElementsByClassName('page-content')[0]}>
-
-                    </Action>;
-                },
-            },
-        ];
-        const rowSelection = {
-            onChange: (selectedRowKeys, selectedRows) => {
-                console.log(`selectedRowKeys: ${selectedRowKeys}`, 'selectedRows: ', selectedRows);
-            },
-            getCheckboxProps: record => ({
-                disabled: record.name === 'Disabled User', // Column configuration not to be checked
-                name: record.name,
-            }),
-            selections: true,
-        };
-
-        return (
-            <Table
-                rowSelection={rowSelection}
-                columns={columns}
-                dataSource={Store.data.slice()}
-                pagination={pagination}
-                rowKey={record => record.id}
-                onChange={this.handlePageChange}
-                loading={isLoading}
-                filterBarPlaceholder="过滤表"
-            />
-        );
-    }
+    // renderTable = () => {
+    //     const {isLoading, pagination} = Store;
+    //     const columns = [
+    //         {
+    //             title: '角色名称',
+    //             dataIndex: 'name',
+    //             key: 'name',
+    //             width: '25%',
+    //             filters:[]
+    //         },
+    //         {
+    //             title: '角色编码',
+    //             dataIndex: 'code',
+    //             key: 'code',
+    //             width: '25%',
+    //             filters:[],
+    //         },
+    //         {
+    //             title: '角色层级',
+    //             dataIndex: 'level',
+    //             key: 'level',
+    //             width: '15%',
+    //             filters: [
+    //                 {
+    //                     text: '全局',
+    //                     value: 'site',
+    //                 }, {
+    //                     text: '组织',
+    //                     value: 'organization',
+    //                 }, {
+    //                     text: '项目',
+    //                     value: 'project',
+    //                 }],
+    //             onFilter: (value, record) => record.level.toString().indexOf(value) === 0,
+    //             sorter: (a, b) => a.level.length - b.level.length,
+    //             render: value => this.renderLevel(value),
+    //         },
+    //         {
+    //             title: '角色来源',
+    //             dataIndex: 'modified',
+    //             key: 'modified',
+    //             filters: [
+    //                 {
+    //                     text: '自定义',
+    //                     value: 'true'
+    //                 },
+    //                 {
+    //                     text: '预定义',
+    //                     value: 'false'
+    //                 }
+    //             ],
+    //             // icon icon-av_timer
+    //             onFilter: (value, record) => record.modified.toString().indexOf(value) === 0,
+    //             sorter: (a, b) => a.level.modified - b.modified.length,
+    //             render: text => this.renderModified(text)
+    //         },
+    //         {
+    //             title: '角色状态',
+    //             dataIndex: 'enabled',
+    //             key: 'enabled',
+    //             render: (text, record) => {
+    //                 if (record.enabled === true) {
+    //                     return <span className={"c7n-iam-status-tag-with-icon"} style={{color: "rgb(0, 191, 165)"}}><i
+    //                         className={"icon icon-check_circle"}></i><span className={"enabletitle"}>启用</span></span>
+    //                 } else {
+    //                     return <span className={"c7n-iam-status-tag-with-icon"} style={{color: "red"}}><i
+    //                         className={"icon icon-remove_circle"}></i><span className={"enabletitle"}>停用</span></span>
+    //                 }
+    //             }
+    //         },
+    //         {
+    //             title: '',
+    //             key: 'action',
+    //             align: 'right',
+    //             render: (text, record) => {
+    //
+    //                 const actionDatas = [{
+    //                     icon: '',
+    //                     type: 'site',
+    //                     text: '修改',
+    //                     // action: this.showModal.bind(this, record.id),
+    //                     // action:this.showModal(record)
+    //                     action:this.shwModal.bind(this)
+    //                 }];
+    //                 if (record.enabled) {
+    //                     actionDatas.push({
+    //                         icon: '',
+    //                         type: 'site',
+    //                         text: '停用',
+    //                         // action: this.handleEnable.bind(this, record),
+    //                     });
+    //                 } else {
+    //                     actionDatas.push({
+    //                         icon: '',
+    //                         type: 'site',
+    //                         text: '启用',
+    //                         // action: this.handleEnable.bind(this, record),
+    //                     });
+    //                 }
+    //                 return <Action  data={actionDatas}
+    //                                 getPopupContainer={() => document.getElementsByClassName('page-content')[0]}>
+    //
+    //                 </Action>;
+    //             },
+    //         },
+    //     ];
+    //     const rowSelection = {
+    //         onChange: (selectedRowKeys, selectedRows) => {
+    //             console.log(`selectedRowKeys: ${selectedRowKeys}`, 'selectedRows: ', selectedRows);
+    //         },
+    //         getCheckboxProps: record => ({
+    //             disabled: record.name === 'Disabled User', // Column configuration not to be checked
+    //             name: record.name,
+    //         }),
+    //         selections: true,
+    //     };
+    //
+    //     return (
+    //         <Table
+    //             rowSelection={rowSelection}
+    //             columns={columns}
+    //             dataSource={Store.data.slice()}
+    //             pagination={pagination}
+    //             rowKey={record => record.id}
+    //             onChange={this.handlePageChange}
+    //             loading={isLoading}
+    //             filterBarPlaceholder="过滤表"
+    //         />
+    //     );
+    // }
     onClick = function ({ key }) {
 
         if(key==1){
@@ -233,7 +238,14 @@ export default class Role extends Component {
                         description="角色是您可分配给成员的一组权限。您可以创建角色并为其添加权限，也可以复制现有角色并调整其权限。"
                         link="#"
                     >
-                        {this.renderTable()}
+                        {/*{this.renderTable()}*/}
+                        <Table dataSet={this.ds}>
+                            <Column name="name" />
+                            <Column name="code"  renderer={this.renderModified}/>
+                            <Column name="level" renderer={this.renderLevel} />
+                            <Column name="enabled" />
+                            {/*<Column renderer={this.renderAction} width={100} align="right" />*/}
+                        </Table>
                     </Content>
                 </Page>
             </div>
